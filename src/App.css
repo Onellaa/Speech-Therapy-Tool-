@@ -1,0 +1,250 @@
+/* src/App.css */
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background-color: #ffebee;
+  padding: 20px;
+  color: #d32f2f;
+  font-size: 1.5rem;
+}
+
+.language-selector {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: end;
+  gap: 10px;
+  margin: 10px;
+  top: 50px;
+  right: 24px;
+}
+
+.language-selector button {
+  margin: 5px;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 25px;
+  border: none;
+  background-color: #ff597b;
+  color: white;
+}
+.language-selector button:hover {
+  background-color: #eca4bd;
+  cursor: pointer;
+}
+
+.main-content {
+  display: flex;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #ffcdd2;
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 50px;
+  margin: 5px 0;
+  background-color: #f8bbd0;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  background-color: #fffde7;
+}
+
+.content h2 {
+  color: #d32f2f;
+}
+
+.scores {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background-color: #e0f7fa;
+  border: 1px solid #b2ebf2;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.word-and-mic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.mic-button {
+  border: none;
+  background: none;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.mic-button:disabled {
+  cursor: not-allowed;
+  color: gray;
+}
+
+.card p {
+  margin: 10px 0 0;
+}
+
+.tick {
+  /* position: absolute;
+  justify-content: center;
+  align-items: center;
+  font-size: 394px;
+  color: green; */
+
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  color: green;
+}
+
+.score {
+  font-size: 18px;
+}
+img {
+  width: 370px;
+  height: 300px;
+}
+.instruction-page {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  font-size: smaller;
+  text-align: center;
+}
+
+.instruction-page.fade-in {
+  opacity: 0.5;
+}
+
+.instruction-page.fade-out {
+  opacity: 0;
+}
+.instruction-btn {
+  left: 20%;
+  margin: 5px;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 25px;
+  border: none;
+  background-color: #ff597b;
+  float: left;
+  color: white;
+}
+.instruction-btn:hover {
+  background-color: #eca4bd;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .header {
+    font-size: 1rem;
+    padding: 15px;
+  }
+
+  .header h1 {
+    margin-top: 50px;
+  }
+  .language-selector {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 5px;
+    margin: 5px;
+  }
+
+  .language-selector button {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .sidebar li {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .content {
+    padding: 10px;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+
+  .card {
+    padding: 5px;
+  }
+
+  .word-and-mic {
+    margin-top: 5px;
+  }
+
+  .mic-button {
+    font-size: 30px;
+  }
+
+  .instruction-page {
+    font-size: 0.8rem;
+    padding: 10px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .instruction-btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+  .tick {
+    font-size: 100px;
+  }
+  .score {
+    padding: 10px;
+  }
+  .instruction-page.fade-in {
+    opacity: 0.5;
+  }
+
+  .instruction-page.fade-out {
+    opacity: 0;
+  }
+}
